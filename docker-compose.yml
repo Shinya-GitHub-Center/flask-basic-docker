@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  flask-dev:
+    build:
+      context: ./docker/flask-dev
+      dockerfile: Dockerfile
+    volumes:
+      - type: bind
+        source: ./flask-dev
+        target: /home/flask-dev/workdir
+    user: flask-dev
+    tty: true
+    stdin_open: true
