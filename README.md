@@ -16,4 +16,21 @@ $ docker compose up -d
 $ docker exec -it <container name> bash
 $ poetry new <desired project name> --name app
 $ cd <desired project name>
+$ poetry shell
+$ poetry add flask
+```
+
+## To finish today's your flask development (With enjoyable 3 exits!!)
+1. `exit` => Exit virtualenv
+2. `exit` => Exit docker container (going back to host)
+3. `docker compose down` => Remove docker container
+4. `exit` => Close your terminal
+
+## To resume yesterday's your flask development
+Run the following commands @ where docker-compose.yml exsists
+```
+$ docker compose up -d
+$ docker exec -it <container name> bash
+$ cd <your project name>
+$ poetry shell
 ```

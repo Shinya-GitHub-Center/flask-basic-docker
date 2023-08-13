@@ -8,6 +8,10 @@ services:
       - type: bind
         source: ./flask-dev
         target: /home/flask-dev/workdir
+    ports:
+      - "5000:5000"
+    environment:
+      - WATCHFILES_FORCE_POLLING=true
     user: flask-dev
     tty: true
     stdin_open: true
