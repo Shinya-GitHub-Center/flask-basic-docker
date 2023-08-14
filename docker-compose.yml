@@ -11,7 +11,9 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - WATCHFILES_FORCE_POLLING=true
+      - FLASK_APP=app.main.py
+      - FLASK_RUN_HOST=0.0.0.0
+      - FLASK_DEBUG=1
     user: flask-dev
     tty: true
     stdin_open: true
